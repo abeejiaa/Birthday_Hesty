@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Untuk Zulaikha 🌸</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<style>
+:root {
+    --pink: #ff8fab;
+    --light-pink: #ffccd5;
+    --cream: #fff0f3;
+    --gold: #ffd166;
+    --purple: #cdb4db;
+    --text: #5a3d5c;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #fff0f3 0%, #ffe5ec 100%);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    position: relative;
+    overflow-x: hidden;
+}
+
+/* Background floral subtle */
+.floral-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: -1;
+    opacity: 0.1;
+}
+
+.floral-bg span {
+    position: absolute;
+    font-size: 1.5rem;
+    animation: float 20s infinite linear;
+}
+
+.floral-bg span:nth-child(1) { top: 15%; left: 10%; }
+.floral-bg span:nth-child(2) { top: 25%; right: 15%; animation-delay: 5s; }
+.floral-bg span:nth-child(3) { bottom: 20%; left: 20%; animation-delay: 10s; }
+.floral-bg span:nth-child(4) { bottom: 30%; right: 10%; animation-delay: 15s; }
+
+/* Main card - balanced size */
+.main-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    max-width: 450px;
+    padding: 50px 40px;
+    border-radius: 28px;
+    text-align: center;
+    box-shadow: 
+        0 20px 40px rgba(255, 143, 171, 0.2),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.8);
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgba(255, 143, 171, 0.1);
+}
+
+/* Header with proper spacing */
+.header {
+    margin-bottom: 35px;
+}
+
+.greeting {
+    font-family: 'Dancing Script', cursive;
+    font-size: 3.2rem;
+    color: var(--pink);
+    margin-bottom: 8px;
+    line-height: 1.1;
+}
+
+.name {
+    font-size: 1.9rem;
+    color: var(--text);
+    font-weight: 600;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.subtitle {
+    color: #888;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* Profile image - balanced size */
+.profile-container {
+    margin: 30px auto;
+    width: 190px;
+    height: 190px;
+    position: relative;
+}
+
+.profile-frame {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    padding: 6px;
+    background: linear-gradient(135deg, var(--pink), var(--purple));
+    box-shadow: 0 12px 25px rgba(255, 143, 171, 0.3);
+    transition: transform 0.4s ease;
+}
+
+.profile-frame:hover {
+    transform: scale(1.03);
+    box-shadow: 0 15px 30px rgba(255, 143, 171, 0.4);
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white;
+}
+
+/* Quote with nice typography */
+.quote {
+    font-style: italic;
+    color: #666;
+    font-size: 1.05rem;
+    line-height: 1.6;
+    margin: 30px 0;
+    padding: 20px;
+    background: rgba(255, 204, 213, 0.1);
+    border-radius: 18px;
+    position: relative;
+}
+
+.quote::before {
+    content: '"';
+    font-size: 3rem;
+    color: var(--pink);
+    position: absolute;
+    top: -15px;
+    left: 15px;
+    opacity: 0.3;
+}
+
+/* Button with perfect balance */
+.main-btn {
+    display: inline-block;
+    padding: 16px 42px;
+    background: linear-gradient(135deg, var(--pink), var(--purple));
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(255, 143, 171, 0.4);
+    position: relative;
+    overflow: hidden;
+    letter-spacing: 0.5px;
+    margin-top: 10px;
+}
+
+.main-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(255, 143, 171, 0.6);
+    letter-spacing: 0.8px;
+}
+
+.main-btn::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: 0.5s;
+}
+
+.main-btn:hover::after {
+    left: 100%;
+}
+
+.main-btn i {
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+/* Small decorative elements */
+.decorative-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 30px;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background: var(--pink);
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+/* Animations */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0) rotate(0deg);
+    }
+    33% {
+        transform: translateY(-20px) rotate(5deg);
+    }
+    66% {
+        transform: translateY(10px) rotate(-5deg);
+    }
+}
+
+/* Responsive with good proportions */
+@media (max-width: 480px) {
+    .main-card {
+        padding: 40px 30px;
+        max-width: 90%;
+    }
+    
+    .greeting {
+        font-size: 2.8rem;
+    }
+    
+    .name {
+        font-size: 1.7rem;
+    }
+    
+    .profile-container {
+        width: 170px;
+        height: 170px;
+    }
+    
+    .main-btn {
+        padding: 15px 35px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 350px) {
+    .greeting {
+        font-size: 2.5rem;
+    }
+    
+    .profile-container {
+        width: 150px;
+        height: 150px;
+    }
+}
+</style>
+</head>
+
+<body>
+<div class="floral-bg">
+    <span>🌸</span>
+    <span>🌺</span>
+    <span>💮</span>
+    <span>🌼</span>
+</div>
+
+<div class="main-card">
+    <div class="header">
+        <h1 class="greeting">Halo</h1>
+        <h2 class="name">Zulaikha Hesty</h2>
+        <p class="subtitle">Teman Terbaikku</p>
+    </div>
+    
+    <div class="profile-container">
+        <div class="profile-frame">
+            <img class="profile-img" src="images/zulaikha_hesty.jpg" alt="Zulaikha Hesty">
+        </div>
+    </div>
+    
+    <div class="quote">
+        "Persahabatan sejati seperti bunga yang selalu mekar di setiap musim, 
+        indah dalam kesederhanaan dan kuat menghadapi segala cuaca."
+    </div>
+    
+    <a href="birthday.html" class="main-btn">
+        <i class="fas fa-sparkles"></i>
+        Buka Kejutan Spesial
+    </a>
+    
+    <div class="decorative-dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+</div>
+
+<script>
+// Simple floating animation for decorative elements
+document.addEventListener('DOMContentLoaded', function() {
+    // Add subtle hover effect to profile
+    const profile = document.querySelector('.profile-frame');
+    profile.addEventListener('mouseenter', function() {
+        this.style.transform = 'scale(1.03) rotate(2deg)';
+    });
+    
+    profile.addEventListener('mouseleave', function() {
+        this.style.transform = 'scale(1.03) rotate(0deg)';
+    });
+    
+    // Add some floating hearts on click
+    const button = document.querySelector('.main-btn');
+    button.addEventListener('click', function(e) {
+        if (e.target.tagName === 'A') {
+            createFloatingHearts();
+        }
+    });
+    
+    function createFloatingHearts() {
+        const hearts = ['❤️', '💖', '💗', '💓', '💞'];
+        for(let i = 0; i < 8; i++) {
+            const heart = document.createElement('div');
+            heart.innerHTML = hearts[Math.floor(Math.random() * hearts.length)];
+            heart.style.position = 'fixed';
+            heart.style.top = '50%';
+            heart.style.left = '50%';
+            heart.style.fontSize = '1.5rem';
+            heart.style.opacity = '0';
+            heart.style.zIndex = '1000';
+            heart.style.pointerEvents = 'none';
+            heart.style.transform = 'translate(-50%, -50%)';
+            heart.style.animation = `heartFloat ${Math.random() * 1 + 1}s ease-out forwards`;
+            
+            document.body.appendChild(heart);
+            
+            setTimeout(() => heart.remove(), 1500);
+        }
+    }
+    
+    // Add CSS for heart animation
+    const style = document.createElement('style');
+    style.textContent = `
+        @keyframes heartFloat {
+            0% {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.5);
+            }
+            20% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: translate(
+                    ${Math.random() * 100 - 50}px, 
+                    ${-Math.random() * 100 - 50}px
+                ) scale(1.2);
+            }
+        }
+    `;
+    document.head.appendChild(style);
+});
+</script>
+</body>
+</html>
